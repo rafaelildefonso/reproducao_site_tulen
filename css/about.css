@@ -1,0 +1,159 @@
+.about-section {
+    height: 100%;
+}
+
+.about-section .about-warp {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-section .about-left {
+    background: #2916e0;
+    -webkit-box-flex: 0;
+    flex: 0 0 47%;
+    max-width: 47%;
+    padding: 0 15px;
+}
+
+.about-img {
+    text-align: center;
+    background-image: url(../assets/images/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: center center;
+}
+
+.about-img img {
+    width: 515px;
+    height: 515px;
+    border-radius: 50%;
+    margin: 82px auto 50px;
+}
+
+.profile-text {
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    color: #fff;
+}
+
+.profile-text h2 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.profile-text p {
+    color: #fff;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-text .profile-btn {
+    display: inline-block;
+    min-width: 160px;
+    padding: 9px 10px;
+    margin-bottom: 10px;
+    margin-right: 28px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-text .profile-email {
+    display: inline-block;
+    font-style: italic;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.about-section .about-right {
+    -webkit-box-flex: 0;
+    flex: 0 0 53%;
+    max-width: 53%;
+    padding: 0 15px;
+}
+
+.about-text {
+    max-width: 810px;
+    margin: 0 auto;
+    padding: 75px 0 50px;
+}
+
+.about-text h2 {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #2916e0;
+    margin-bottom: 20px;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 9px;
+}
+
+.skill-warp {
+    max-width: 930px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.circle-item {
+    margin-bottom: 30px;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.circle-progress {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.circle-progress canvas {
+    /* transform: rotate(90deg); */
+    /* aspect-ratio: auto 100 / 100; */
+    /* overflow-clip-margin: content-box; */
+    /* overflow: clip; */
+    border: 5px #2916e0 solid;
+    border-radius: 50%;
+}
+
+.circle-progress .progress-info {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.circle-progress .progress-info h2 {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.circle-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
