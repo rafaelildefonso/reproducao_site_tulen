@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "themify";
+    src: url("../assets/fonts/themify.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ti-"],
+[class*=" ti-"] {
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-arrow-right:before {
+    content: "\e628";
+}
+
+.ti-arrow-left:before {
+    content: "\e629";
+}
+
+.ti-heart:before {
+    content: "\e634";
+}
+
+.ti-timer:before {
+    content: "\e66e";
+}
+
+.ti-menu:before {
+    content: "\e68e";
+}
+
+.ti-location-pin:before {
+    content: "\e693";
+}
+
+.ti-linkedin:before {
+    content: "\e735";
+}
+
+.ti-instagram:before {
+    content: "\e73d";
+}
+
+.ti-facebook:before {
+    content: "\e741";
+}
+
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+
+.ti-email:before {
+    content: "\e75a";
+}

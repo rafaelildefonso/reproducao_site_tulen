@@ -1,0 +1,350 @@
+body {
+    padding-left: 90px;
+    overflow: hidden;
+}
+
+.menu-wrapper {
+    position: fixed;
+    width: 90px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    transition: 0.4s;
+}
+
+.menu-switch {
+    width: 100%;
+    height: 90px;
+    padding-top: 23px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: #0f0f0f;
+    cursor: pointer;
+}
+
+.menu-switch input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 85px;
+    opacity: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.side-menu-wrapper {
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    left: -280px;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    z-index: 999;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu-switch input:checked~.side-menu-wrapper {
+    left: 0;
+    opacity: 1;
+}
+
+.side-menu-wrapper .sm-header {
+    display: flex;
+}
+
+.menu-close {
+    width: 90px;
+    height: 90px;
+    padding-top: 23px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: #0f0f0f;
+    cursor: pointer;
+}
+
+.site-logo {
+    background: #2916e0;
+    width: calc(100% - 90px);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.main-menu {
+    height: calc(100% - 160px);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.main-menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.main-menu ul li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main-menu ul li a {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    color: #b2b2b2;
+    transition: 0.3s;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
+    color: #2916e0;
+}
+
+.sm-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.sm-footer .sm-socail a {
+    display: inline-block;
+    font-size: 18px;
+    color: #b2b2b2;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.sm-footer .sm-socail a:last-child {
+    margin-right: 0;
+}
+
+.copyright-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b2b2b2;
+    padding-bottom: 40px;
+}
+
+.copyright-text i {
+    color: #e21010;
+}
+
+.copyright-text a {
+    color: #b2b2b2;
+}
+
+.copyright-text a:hover {
+    color: #2916e0;
+}
+
+.menu-social-warp {
+    height: calc(100% - 90px);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.menu-social a {
+    display: block;
+    font-size: 18px;
+    color: #252525;
+    margin-bottom: 50px;
+}
+
+.menu-social a:last-child {
+    margin-bottom: 0;
+}
+
+.hero-section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.pana-accordion {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.pana-accordion .pana-accordion-wrap {
+    margin-left: -1px;
+    width: 300%;
+    height: 100%;
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: top left -200px;
+    transition: background-position 0.4s;
+}
+
+.pana-accordion-item,
+.hero-item {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover {
+    background-position: top center;
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(368px);
+    }
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover~.pana-accordion-item {
+    background-position: top left -200px;
+    animation: mover 0.4s ease-in-out forwards;
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:last-child {
+    background-position: top center;
+}
+
+/* .pana-accordion .pana-accordion-wrap:nth-child(1):hover {
+    left: 0px;
+}
+
+.pana-accordion .pana-accordion-wrap:nth-child(2):hover {
+    left: 180px;
+}
+
+.pana-accordion .pana-accordion-wrap:nth-child(3):hover {
+    left: 360px;
+}
+
+.pana-accordion .pana-accordion-wrap:nth-child(4):hover {
+    left: 540px;
+}
+
+.pana-accordion .pana-accordion-wrap:nth-child(5):hover {
+    left: 720px;
+} */
+
+.pana-accordion-item .pa-text,
+.hero-item .pa-text {
+    padding-left: 40px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    top: -50px;
+}
+
+.pana-accordion-item:hover .pa-text,
+.hero-item:hover .pa-text {
+    opacity: 1;
+    top: 0;
+    -webkit-transition: all 0.4s ease 0.4s;
+    -o-transition: all 0.4s ease 0.4s;
+    transition: all 0.4s ease 0.4s;
+}
+
+.pana-accordion-item:hover:after,
+.hero-item:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background: black;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8211659664)), color-stop(94%, rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+.pana-accordion-item .pa-text .pa-tag,
+.hero-item .pa-text .pa-tag {
+    display: inline-block;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #2916e0;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.pana-accordion-item .pa-text h2,
+.hero-item .pa-text h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pana-accordion-item .pa-text .pa-author,
+.hero-item .pa-text .pa-author {
+    overflow: hidden;
+}
+
+.pana-accordion-item .pa-text .pa-author img,
+.hero-item .pa-text .pa-author img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.pana-accordion-item .pa-text h4,
+.hero-item .pa-text h4 {
+    font-weight: 600;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item .pana-accordion-mask {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: #000;
+    -moz-opacity: 0.4;
+    -ms-opacity: 0.4;
+    -o-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover .pana-accordion-mask {
+    display: none
+}
