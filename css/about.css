@@ -132,10 +132,6 @@
 }
 
 .circle-progress canvas {
-    /* transform: rotate(90deg); */
-    /* aspect-ratio: auto 100 / 100; */
-    /* overflow-clip-margin: content-box; */
-    /* overflow: clip; */
     border: 5px #2916e0 solid;
     border-radius: 50%;
 }
