@@ -22,7 +22,8 @@
 
 .contact-box {
     width: calc(100% - 30px);
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     padding-top: 40px;
     position: absolute;
     background: #fff;
