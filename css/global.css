@@ -124,6 +124,64 @@ h6 {
     background-position: top center;
 }
 
+/* LOADER */
+#preloder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: #000;
+    animation: loader_delay 1.6s linear forwards;
+}
+
+@keyframes loader_delay {
+    0% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 60px;
+    animation: loader 1.6s linear forwards;
+    /* -webkit-animation: loader 0.8s linear infinite; */
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
 /* MENU */
 
 body {

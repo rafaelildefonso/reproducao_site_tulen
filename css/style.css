@@ -5,7 +5,7 @@ body {
 .hero-section {
     height: 100%;
     width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .pana-accordion {
@@ -16,36 +16,58 @@ body {
 
 .pana-accordion .pana-accordion-wrap {
     margin-left: -1px;
-    width: 300%;
+    width: 100%;
     height: 100%;
+    display: flex;
 }
 
 .pana-accordion .pana-accordion-wrap .pana-accordion-item {
-    width: 100%;
-    height: 200px;
+    /* width: 100%; */
+    /* height: 200px; */
+    /* position: absolute; */
+    /* position: relative; */
+    /* left: 0; */
+    /* top: 0; */
+    background-position: top left -200px;
+    background-size: cover;
+    transition: all 0.4s;
     overflow: hidden;
     float: left;
-    position: absolute;
-    left: 0;
-    top: 0;
+    flex-grow: 1;
+}
+
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:first-child {
+    background-position: top center;
+    flex-grow: 7;
+}
+
+.pana-accordion .pana-accordion-wrap:hover .pana-accordion-item {
     background-position: top left -200px;
-    transition: background-position 0.4s;
+    /* animation: mover 0.4s ease-in-out forwards; */
+    flex-grow: 1;
+}
+
+.pana-accordion .pana-accordion-wrap:hover .pana-accordion-item:hover {
+    background-position: top center;
+    flex-grow: 7;
 }
 
 .pana-accordion-item,
 .hero-item {
     display: -webkit-box;
-    display: flex;
+    /* display: flex; */
     -webkit-box-align: end;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     position: relative;
 }
 
-.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover {
+/* .pana-accordion .pana-accordion-wrap .pana-accordion-item:hover {
     background-position: top center;
-}
+    flex-grow: 7;
+} */
 
-@keyframes mover {
+/* @keyframes mover {
     from {
         transform: translateX(0px);
     }
@@ -53,16 +75,13 @@ body {
     to {
         transform: translateX(610px);
     }
-}
+} */
 
-.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover~.pana-accordion-item {
+/* .pana-accordion .pana-accordion-wrap .pana-accordion-item:hover~.pana-accordion-item {
     background-position: top left -200px;
-    animation: mover 0.4s ease-in-out forwards;
-}
-
-.pana-accordion .pana-accordion-wrap .pana-accordion-item:last-child {
-    background-position: top center;
-}
+     animation: mover 0.4s ease-in-out forwards; 
+    flex-grow: 1;
+}  */
 
 /* .pana-accordion .pana-accordion-wrap:nth-child(1):hover {
     left: 0px;
@@ -88,23 +107,40 @@ body {
 .hero-item .pa-text {
     padding-left: 40px;
     padding-bottom: 50px;
-    position: relative;
+    position: absolute;
     z-index: 5;
     opacity: 0;
-    top: -50px;
+    bottom: -1%;
+    text-wrap: nowrap;
 }
 
-.pana-accordion-item:hover .pa-text,
-.hero-item:hover .pa-text {
+.pana-accordion-wrap .pana-accordion-item:first-child .pa-text {
     opacity: 1;
-    top: 0;
+    bottom: -1%;
     -webkit-transition: all 0.4s ease 0.4s;
     -o-transition: all 0.4s ease 0.4s;
     transition: all 0.4s ease 0.4s;
 }
 
-.pana-accordion-item:hover:after,
-.hero-item:hover:after {
+.pana-accordion-wrap:hover .pana-accordion-item .pa-text {
+    padding-left: 40px;
+    padding-bottom: 50px;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    bottom: -1%;
+}
+
+.pana-accordion-wrap:hover .pana-accordion-item:hover .pa-text,
+.hero-item:hover .pa-text {
+    opacity: 1;
+    bottom: -1%;
+    -webkit-transition: all 0.4s ease 0.4s;
+    -o-transition: all 0.4s ease 0.4s;
+    transition: all 0.4s ease 0.4s;
+}
+
+.pana-accordion-wrap .pana-accordion-item:first-child:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -116,6 +152,25 @@ body {
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+.pana-accordion-wrap:hover .pana-accordion-item:after {
+    display: none;
+}
+
+.pana-accordion-wrap:hover .pana-accordion-item:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background: black;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8211659664)), color-stop(94%, rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    display: block;
 }
 
 .pana-accordion-item .pa-text .pa-tag,
@@ -175,6 +230,28 @@ body {
     opacity: 0.4;
 }
 
-.pana-accordion .pana-accordion-wrap .pana-accordion-item:hover .pana-accordion-mask {
-    display: none
+/* .pana-accordion .pana-accordion-wrap .pana-accordion-item:hover .pana-accordion-mask {
+    display: none;
+} */
+
+.pana-accordion .pana-accordion-wrap .pana-accordion-item:first-child .pana-accordion-mask {
+    display: none;
+}
+
+.pana-accordion .pana-accordion-wrap:hover .pana-accordion-item .pana-accordion-mask {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: #000;
+    -moz-opacity: 0.4;
+    -ms-opacity: 0.4;
+    -o-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.pana-accordion .pana-accordion-wrap:hover .pana-accordion-item:hover .pana-accordion-mask {
+    display: none;
 }
