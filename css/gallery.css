@@ -53,20 +53,69 @@
     margin-left: -5px;
     margin-right: -5px;
     display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .gallery-item {
     padding: 0 5px;
     margin-bottom: 10px;
+    position: relative;
+    height: min-content;
+}
+
+#mulher {
+    grid-area: 1/1/3/3;
+}
+
+#carro {
+    
+}
+
+#fone {
+    
+}
+
+#pimentao {
+    grid-area: 1/5/3/6;
+}
+
+#calango {
+    grid-area: 3/1/3/3;
+}
+
+#agua {
+    grid-area: 2/3/5/5;
+}
+
+#biscoitos {
+    grid-area: 3/5/4/6;
+}
+
+#trabalhador {
+    
+}
+
+#praia {
+    grid-area: 4/1/5/2;
+}
+
+#maos {
+    grid-area: 4/2/5/4;
+}
+
+#laranja {
+    grid-area: 4/4/5/5;
 }
 
 .gallery-item a {
-    /* display: block; */
+    display: inline-block;
     position: relative;
 }
 
 .gallery-item a img {
-    /* min-width: 100%; */
+    min-width: 100%;
 }
 
 .gallery-item a:after {
