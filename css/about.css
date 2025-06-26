@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .about-section {
     height: 100%;
 }

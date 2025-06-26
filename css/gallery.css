@@ -1,0 +1,114 @@
+.gallery-section {
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 90px;
+}
+
+.gallery-header {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gallery-header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-right: 74px;
+    padding-left: 210px;
+    z-index: 99;
+}
+
+.gallery-header h4 {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.gallery-filter {
+    list-style: none;
+    float: right;
+}
+
+.gallery-filter li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #252525;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.gallery-filter li.active {
+    color: #2916e0;
+}
+
+.nice-scroll {
+    height: 100%;
+}
+
+.gallery-section .gallery-warp {
+    margin-left: -5px;
+    margin-right: -5px;
+    display: grid;
+}
+
+.gallery-item {
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.gallery-item a {
+    /* display: block; */
+    position: relative;
+}
+
+.gallery-item a img {
+    /* min-width: 100%; */
+}
+
+.gallery-item a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.gallery-item:hover a:after {
+    opacity: 0.8;
+}
+
+.gallery-item .gi-hover {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.gallery-item:hover .gi-hover {
+    opacity: 1;
+}
+
+.gallery-item .gi-hover img {
+    display: inline-block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 6px;
+}
+
+.gallery-item .gi-hover h6 {
+    padding-top: 5px;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    top: 2px;
+}
