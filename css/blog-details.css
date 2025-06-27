@@ -1,5 +1,10 @@
+body {
+    overflow-x: hidden;
+
+}
+
 .blog-details {
-    height: 100%;
+    /* height: 100%; */
 }
 
 .container {
@@ -67,8 +72,34 @@
 .blog-gallery {
     padding-top: 40px;
     margin: 0 -5px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blog-gallery #pazAmor {
+    grid-area: 1/1/2/3;
+}
+
+.blog-gallery #calango {
+    grid-area: 2/1/3/1;
+}
+
+.blog-gallery #agua {
+    grid-area: 3/1/5/1;
+}
+
+.blog-gallery #megafone {
+    grid-area: 2/2/4/3;
+}
+
+.blog-gallery #cachorro {
+    grid-area: 4/2/5/3;
+}
+
+
+.blog-gallery .bg-item img {
+    max-height: 100%;
 }
 
 .p-0 {
@@ -231,7 +262,7 @@
 }
 
 .pb-2 {
-    padding-bottom: .5rem ;
+    padding-bottom: .5rem;
     margin-bottom: 1.5rem;
 }
 
