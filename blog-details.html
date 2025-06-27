@@ -85,7 +85,7 @@
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
 					totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
 					dicta sunt explicabo</p>
-				<div class="row blog-gallery">
+				<div class="blog-gallery">
 					<div class="bg-item" id="pazAmor">
 						<img src="assets/images/blog-details/1.jpg.jpeg" alt="">
 					</div>
@@ -220,17 +220,20 @@
 				<div class="comment-form">
 					<h3>Leave A Comment</h3>
 					<form action="#">
-						<div class="row">
-							<div class="col-md-4">
-								<input type="text" placeholder="Name">
+						<div class="inputs">
+							<div class="inputGroup">
+								<div id="inputName">
+									<input type="text" placeholder="Name">
+								</div>
+								<div id="inputEmail">
+									<input type="text" placeholder="Email">
+								</div>
+								<div id="inputPhone">
+									<input type="text" placeholder="Phone">
+								</div>
+
 							</div>
-							<div class="col-md-4">
-								<input type="text" placeholder="Email">
-							</div>
-							<div class="col-md-4">
-								<input type="text" placeholder="Phone">
-							</div>
-							<div class="col-md-12">
+							<div id="inputButton">
 								<textarea placeholder="Comment"></textarea>
 								<button type="submit">Post Comment</button>
 							</div>
