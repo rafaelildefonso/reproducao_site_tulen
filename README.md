@@ -1,0 +1,1 @@
+Este é um projeto que tinha intuito de reproduzir um site do colorlib, feito para um trabalho escolar, onde o objetivo era aprender a usar o display grid.
